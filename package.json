@@ -1,0 +1,26 @@
+{
+  "name": "evm-agent-kit",
+  "version": "1.0.0",
+  "description": "connect any ai agents to ethereum protocols",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@langchain/community": "^0.3.37",
+    "@langchain/core": "^0.3.43",
+    "@langchain/langgraph": "^0.2.60",
+    "@langchain/openai": "^0.5.0",
+    "dotenv": "^16.4.7",
+    "ethers": "^6.13.5",
+    "node-fetch": "^3.3.2",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.2"
+  }
+}
