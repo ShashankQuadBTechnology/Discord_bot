@@ -6,11 +6,13 @@ import {
   fetchPrice,
   get_balance,
   transfer,
-  trade
+  trade,
+  batchOrder
 } from "../tools";
 
 import {
-    Config
+    Config,
+    OrderParams
   } from "../types";
 
 /**
@@ -66,4 +68,20 @@ export class EvmAgentKit {
     return trade(this, outputToken, inputAmount, inputToken, slippageBps);
   }
 
+  /**
+ * Places multiple limit orders using the 0x protocol.
+ * @param orders Array of OrderParams
+ * @param makerToken Address of the token being sold
+ * @param takerToken Address of the token being bought
+ * @returns Transaction result as JSON string with tx hashes
+ */
+async batchOrder(
+  orders: OrderParams[],
+  makerToken: string,
+  takerToken: string,
+): Promise<string[]> {
+  return  batchOrder(this, orders, makerToken, takerToken);
 }
+
+}
+
