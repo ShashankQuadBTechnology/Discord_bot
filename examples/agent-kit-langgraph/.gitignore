@@ -9,3 +9,5 @@ package-lock.json
 # Build output
 dist/
 build/
+
+.DS_Store
